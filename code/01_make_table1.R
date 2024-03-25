@@ -11,7 +11,7 @@ table_one <- data_clean %>%
       digits = 2) %>% 
   collapse_rows(columns = 1, valign = "top") %>% 
   kable_styling(full_width = FALSE) %>% 
-  add_header_above(c(" " = 2, "Region" = 3))
+  add_header_above(c(" " = 2, "Risk Ratio by Region" = 3))
 
 saveRDS(
   table_one,
