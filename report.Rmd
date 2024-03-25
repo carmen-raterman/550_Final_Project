@@ -1,0 +1,53 @@
+---
+title: "550 Final Project 4"
+author: "Carmen Raterman"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Introduction
+
+The focus for this report is a dataset containing transportation mode percentages for California residents ages 16 and older commuting to work from 2006 to 2010. This data was sourced from the U.S. Census Bureau's Decennial Census and American Community Survey as part of the Healthy Communities Data and Indicators Project by the Office of Health Equity. My aim is to analyze the risk ratios of various modes of transportation among different racial and ethnic groups in California by region.
+
+```{r load-data}
+getwd()
+here::i_am("report.Rmd")
+data <- readRDS(
+  file = here::here("output", "data_clean.rds")
+)
+
+```
+
+# Descriptive Analysis
+
+## Table One
+
+Characteristics from the California Transportation dataset are displayed in the table below.
+
+```{r table1}
+# reading in the table we created using kableExtra
+table_one <- readRDS(
+  file = here::here("output", "table_one.rds")
+)
+# now display it
+table_one
+```
+
+The contents of this table one show the risk ratios of the modes of transportation, for example biking, staying at home, public transportation, etc., by reported racial and ethnic groups, in three regions of California from the years 2006-2010. The three regions, the Bay Area, Monterrey Bay, and Butte, were chosen due to their differences in size of population, large, medium, and small, respectively.
+
+
+## Part Two: Include a Figure
+
+```{r, scatterplot}
+
+knitr::include_graphics(
+  here::here("output", "scatterplot.png")
+)
+```
+
+This figure shows the association between the risk ratio of transportation modes and race/ethnicity across three regions (Bay Area, Butte, and Monterey Bay) in California. Each facet represents a region, with scatter points indicating the varying risk ratios of transportation modes across different racial and ethnic groups.
+
+
+
+
+
