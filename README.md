@@ -7,9 +7,12 @@ This repository contains the code and files for analyzing transportation mode fo
 ## How to Generate the Final Report
 
 To generate the final report, follow these steps:
-1\. Fork and clone this repository
-2\. Navigate to the project directory from the terminal
-3\. Run the Makefile using the `make` command in your terminal or command prompt (example: `make report.html`)
+
+1.  Fork and clone this repository
+
+2.  Navigate to the project directory from the terminal
+
+3.  Run the Makefile using the `make` command in your terminal or command prompt (example: `make report.html`)
 
 ## Contents of the Report
 
@@ -30,6 +33,8 @@ The code for creating the scatter plot is located in the file `02_make_scatter.R
 
 ## Synchronizing Your Package Repository using `renv` package
 
-1\. If `renv` package is not already installed, run `install.packages("renv") in the console
-2\. Set the working directory to the project directory
-3\. To sync the package repository and install the required packages specified in the renv.lock file, run `make install` from the terminal. This automatically runs `renv::restore()`.
+1\. If `renv` package is not already installed, run `install.packages("renv")` in the console
+
+2\. Set the working directory to the project directory\`
+
+3\. To sync the package repository and install the required packages specified in the renv.lock file, run `make install` from the terminal. This automatically runs `renv::restore()\` .
