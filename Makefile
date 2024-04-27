@@ -36,4 +36,4 @@ docker_image: $(PROJECTFILES) $(RENVFILES) Dockerfile
 
 #Run a Container
 report/report.html:
-	docker run -v "$$(pwd)/report:/final_project/report" csophia/final_project || "/$$(pwd)/report":final_project/report csophia/final_project
+	docker run -v "$$(pwd)/report:/final_project/report" carmensophia/final_project || "/$$(pwd)/report":final_project/report carmensophia/final_project
