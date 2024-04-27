@@ -38,3 +38,31 @@ The code for creating the scatter plot is located in the file `02_make_scatter.R
 2\. Set the working directory to the project directory\`
 
 3\. To sync the package repository and install the required packages specified in the renv.lock file, run `make install` from the terminal. This automatically runs `renv::restore()\` .
+
+## Building a Docker Image Locally
+
+To build the Docker image for this project, run the following command:
+
+`docker build -t carmensophia/final_project .`
+
+The Docker image is also available on DockerHub at carmensophia/final_project. You can pull this image using:
+
+`docker pull carmensophia/final_project`
+
+To run the Docker image and generate the final report for Mac users:
+
+`docker run -v "$(pwd)/report:/final_project/report" carmensophia/final_project`
+
+After the run completes, the report folder will contain the rendered final report.
+
+For Windows users using Git Bash, add an extra / to the path and run the command below:
+
+`docker run -v "/$(pwd)/report:/final_project/report" carmensophia/final_project`
+
+## Make Rule for Docker
+
+The link to the Docker image is below:
+
+<https://hub.docker.com/repository/docker/carmensophia/final_project/general>
+
+To generate the final report from the Docker container, you can use the Makefile rule report/report.html: `make report/report.html`
